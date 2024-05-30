@@ -100,7 +100,7 @@ function App() {
         <MainHeading>Software Developer</MainHeading>
         <MainHeading>extraordinaire</MainHeading>
 
-        <p>Here's a few thing's I've recently worked on</p>
+        <p>Here's a few things I've recently worked on</p>
         <Grid>
           <GridItem>
             <a
