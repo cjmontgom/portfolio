@@ -79,10 +79,16 @@ function App() {
 
   const [theme, setTheme] = useState(getInitialTheme);
 
+  useEffect(() => {
+    const themeName = theme === darkTheme ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", themeName);
+    localStorage.setItem("theme", themeName);
+  }, [theme]);
+
   const toggleTheme = () => {
-    const newTheme = theme === lightTheme ? darkTheme : lightTheme;
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme === lightTheme ? "light" : "dark");
+    setTheme((prevTheme) =>
+      prevTheme === lightTheme ? darkTheme : lightTheme
+    );
   };
 
   return (
