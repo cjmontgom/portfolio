@@ -2,12 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const SwitchContainer = styled.div`
-  width: 60px;
+  width: 40px;
   z-index: 1;
-  @media (max-width: 768px) {
-    margin-left: 0;
-    width: 40px;
-  }
 `;
 
 const Switch = styled.input.attrs({ type: "checkbox" })`
@@ -23,10 +19,10 @@ const Label = styled.label`
   outline: none;
   user-select: none;
   padding: 2px;
-  width: 60px;
-  height: 30px;
+  width: 40px;
+  height: 20px;
   background-color: #000000;
-  border-radius: 30px;
+  border-radius: 20px;
   transition: background 0.4s;
 
   &:before,
@@ -42,7 +38,7 @@ const Label = styled.label`
     bottom: 2px;
     right: 2px;
     background-color: #fff;
-    border-radius: 30px;
+    border-radius: 20px;
     transition: background 0.4s;
   }
 
@@ -50,9 +46,9 @@ const Label = styled.label`
     top: 4px;
     left: 4px;
     bottom: 4px;
-    width: 26px;
+    width: 16px;
     background-color: #000000;
-    border-radius: 22px;
+    border-radius: 12px;
     transition: margin 0.4s, background 0.4s;
   }
 
@@ -65,27 +61,8 @@ const Label = styled.label`
   }
 
   ${Switch}:checked + &:after {
-    margin-left: 30px;
+    margin-left: 20px;
     background-color: white;
-  }
-
-  @media (max-width: 768px) {
-    width: 40px;
-    height: 20px;
-    border-radius: 20px;
-
-    &:before {
-      border-radius: 20px;
-    }
-
-    &:after {
-      width: 16px;
-      border-radius: 12px;
-    }
-
-    ${Switch}:checked + &:after {
-      margin-left: 20px;
-    }
   }
 `;
 
