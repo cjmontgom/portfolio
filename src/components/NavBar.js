@@ -11,7 +11,9 @@ const Container = styled.nav`
   padding: 30px;
 `;
 
-const Heading = styled.span``;
+const Heading = styled.span`
+  font-family: ${({ theme }) => theme.fonts.primary};
+`;
 
 const NavBar = ({ theme, setTheme }) => {
   useEffect(() => {

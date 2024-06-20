@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import breakpoints from "../shared/breakpoints";
 
 const Container = styled.div`
   margin: auto;
@@ -11,23 +12,19 @@ const Container = styled.div`
 `;
 
 const ZanyIntroFont = styled.span`
-  font-size: 4rem;
-  font-family: Cormorant Garamond, serif;
-  font-weight: 400;
+  font-family: ${({ theme }) => theme.fonts.secondary};
   font-style: italic;
+  font-size: 4rem;
+  font-weight: 400;
+
+  @media (max-width: ${breakpoints.mobile}) {
+  }
 `;
 
 const IntroFont = styled.span`
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-weight: ${({ theme }) => theme.fonts.weight.normal};
   font-size: 3rem;
-  font-weight: 300;
-  font-family: Plus Jakarta Sans;
-`;
-
-const HorizontalRule = styled.hr`
-  height: 1px;
-  width: 90%;
-  border: 0;
-  border-top: 1px solid ${(props) => props.theme.text};
 `;
 
 const Intro = () => {
@@ -41,7 +38,6 @@ const Intro = () => {
           <ZanyIntroFont> Software Developer </ZanyIntroFont>extraordinaire
         </IntroFont>
       </Container>
-      <HorizontalRule />
     </>
   );
 };

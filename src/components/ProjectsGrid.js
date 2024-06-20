@@ -11,11 +11,15 @@ const Container = styled.div`
   padding: 20px;
 `;
 
+const Paragraph = styled.p`
+  font-family: ${({ theme }) => theme.fonts.primary};
+`;
+
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
-  margin-top: 20px;
+  margin: 100px 0;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -44,7 +48,7 @@ const GridItem = styled.div`
 function ProjectsGrid() {
   return (
     <Container>
-      <p>Here's a few things I've recently worked on</p>
+      <Paragraph>Some things I've recently worked on...</Paragraph>
       <Grid>
         <GridItem>
           <a
