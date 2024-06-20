@@ -1,25 +1,41 @@
 import React, { useState } from "react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
-import ProjectsGrid from "./components/ProjectsGrid";
-import NavBar from "./components/NavBar";
-import Intro from "./components/Intro";
+import { Intro, NavBar, ProjectsGrid, ContactAndSocials } from "./components";
 
+const fonts = {
+  primary: "Plus Jakarta Sans",
+  secondary: "Cormorant Garamond, serif",
+  weight: {
+    normal: "300",
+  },
+};
+
+// if you change these theme colours, you also need to change them in the index.html file
 export const lightTheme = {
-  background: "#F3E8EB",
-  text: "#433E49",
+  background: "#f2e9f4",
+  text: "#212529",
+  fonts: fonts,
 };
 
 export const darkTheme = {
-  background: "#433E49",
-  text: "#F3E8EB",
+  background: "#212529",
+  text: "#f2e9f4",
+  fonts: fonts,
 };
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: ${(props) => props.theme.background};
-    color: ${(props) => props.theme.text};
+    background-color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.text};
     transition: all 0.3s linear;
   }
+`;
+
+const HorizontalRule = styled.hr`
+  height: 1px;
+  width: 90%;
+  border: 0;
+  border-top: 1px solid ${({ theme }) => theme.text};
 `;
 
 function App() {
@@ -35,7 +51,10 @@ function App() {
       <GlobalStyle />
       <NavBar theme={theme} setTheme={setTheme} />
       <Intro />
+      <HorizontalRule />
       <ProjectsGrid />
+      <HorizontalRule />
+      <ContactAndSocials />
     </ThemeProvider>
   );
 }
