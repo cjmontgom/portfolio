@@ -48,7 +48,7 @@ const GridItem = styled.div`
 function ProjectsGrid() {
   return (
     <Container>
-      <Paragraph>Some things I've recently worked on...</Paragraph>
+      <Paragraph>Here's some stuff I've recently worked on...</Paragraph>
       <Grid>
         <GridItem>
           <a

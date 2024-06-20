@@ -4,13 +4,15 @@ import { EmailIcon, GitHubIcon, LinkedInIcon } from "../assets/socials";
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 `;
 
 const IconWrapper = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin: 100px 15px;
 
   svg {

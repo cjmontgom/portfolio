@@ -21,7 +21,7 @@ const Label = styled.label`
   padding: 2px;
   width: 40px;
   height: 20px;
-  background-color: #000000;
+  background-color: ${({ theme }) => theme.text};
   border-radius: 20px;
   transition: background 0.4s;
 
@@ -37,7 +37,7 @@ const Label = styled.label`
     left: 2px;
     bottom: 2px;
     right: 2px;
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.background};
     border-radius: 20px;
     transition: background 0.4s;
   }
@@ -47,22 +47,13 @@ const Label = styled.label`
     left: 4px;
     bottom: 4px;
     width: 16px;
-    background-color: #000000;
+    background-color: ${({ theme }) => theme.text};
     border-radius: 12px;
     transition: margin 0.4s, background 0.4s;
   }
 
-  ${Switch}:checked + & {
-    background-color: white;
-  }
-
-  ${Switch}:checked + &:before {
-    background-color: black;
-  }
-
   ${Switch}:checked + &:after {
     margin-left: 20px;
-    background-color: white;
   }
 `;
 

@@ -14,17 +14,22 @@ const Container = styled.div`
 const ZanyIntroFont = styled.span`
   font-family: ${({ theme }) => theme.fonts.secondary};
   font-style: italic;
-  font-size: 4rem;
   font-weight: 400;
+  font-size: 2.8rem;
 
-  @media (max-width: ${breakpoints.mobile}) {
+  @media (min-width: ${breakpoints.tablet}) {
+    font-size: 4rem;
   }
 `;
 
 const IntroFont = styled.span`
   font-family: ${({ theme }) => theme.fonts.primary};
   font-weight: ${({ theme }) => theme.fonts.weight.normal};
-  font-size: 3rem;
+  font-size: 2rem;
+
+  @media (min-width: ${breakpoints.tablet}) {
+    font-size: 3rem;
+  }
 `;
 
 const Intro = () => {
