@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.4e3e545f.js",
+    "main.js": "/portfolio/static/js/main.d3591e9f.js",
     "static/media/studio-augusto.png": "/portfolio/static/media/studio-augusto.55d2df6a3991dad7dbfa.png",
     "static/media/francis-augusto.png": "/portfolio/static/media/francis-augusto.02cb27674555a17863cc.png",
     "static/media/future-natures.png": "/portfolio/static/media/future-natures.1076b05637464c345310.png",
     "static/media/hubble.png": "/portfolio/static/media/hubble.022e608480953029a83c.png",
+    "static/media/github.svg": "/portfolio/static/media/github.e87fb3bb245a6118c1b26a5e1e2c55a9.svg",
     "index.html": "/portfolio/index.html",
-    "main.4e3e545f.js.map": "/portfolio/static/js/main.4e3e545f.js.map"
+    "static/media/email.svg": "/portfolio/static/media/email.2cf8522ee1c8fe6b8a5e61d04c0754a6.svg",
+    "static/media/linkedin.svg": "/portfolio/static/media/linkedin.61ce2dd589fe0c3cbfe913182513f42e.svg",
+    "main.d3591e9f.js.map": "/portfolio/static/js/main.d3591e9f.js.map"
   },
   "entrypoints": [
-    "static/js/main.4e3e545f.js"
+    "static/js/main.d3591e9f.js"
   ]
 }
